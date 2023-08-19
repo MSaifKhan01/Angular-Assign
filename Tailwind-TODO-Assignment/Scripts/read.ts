@@ -62,6 +62,7 @@ function Delete() : void{
             .then((data)=>{
                 console.log(data)
                 DisplayData(data)
+                // fetchAndRender(data)
             })
             .catch(e=>console.log(e))
 
