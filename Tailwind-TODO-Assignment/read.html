@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Read</title>
+  </head>
+  <body>
+    <nav>
+      <div class="border border-black-500 bg-blue-500 mb-10 rounded shadow">
+        <ul class="flex justify-center">
+          <li class="px-4 py-2 text-white"><a href="./index.html">Home</a></li>
+          <li class="px-4 py-2 text-white"><a href="./read.html">Todos</a></li>
+          <li class="px-4 py-2 text-white">
+            <a href="./index.html">Create Todo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      id="popupForm"
+      class="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 hidden"
+    >
+      <div class="bg-white p-6 rounded-md shadow-md w-80">
+        <h2 class="text-xl font-semibold mb-4">Edit Task</h2>
+        <form>
+          <div class="mb-4">
+            <label for="editTitle" class="block text-gray-600">Id</label>
+            <input
+              type="text"
+              id="editid"
+              class="w-full border rounded-md px-3 py-2"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="editTitle" class="block text-gray-600">Title</label>
+            <input
+              type="text"
+              id="editTitle"
+              class="w-full border rounded-md px-3 py-2"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="editDescription" class="block text-gray-600"
+              >Description</label
+            >
+            <textarea
+              id="editDescription"
+              class="w-full border rounded-md px-3 py-2"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-4">
+            <label for="editStatus" class="block text-gray-600">Status</label>
+            <select
+              id="editStatus"
+              class="w-full border rounded-md px-3 py-2"
+              required
+            >
+              <option value="todo">Todo</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label for="editDate" class="block text-gray-600">Date</label>
+            <input
+              type="datetime-local"
+              id="editDate"
+              class="w-full border rounded-md px-3 py-2"
+              required
+            />
+          </div>
+          <button
+            id="submitedit"
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Save
+          </button>
+          <button
+            type="button"
+            class="bg-gray-300 text-gray-700 px-4 py-2 rounded ml-2 hover:bg-gray-400"
+            id="closePopup"
+          >
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+    <header>
+      <div id="appendHere"></div>
+    </header>
+  </body>
+  <script src="./Scripts/read.js"></script>
+</html>

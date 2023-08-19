@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TODO</title>
+  </head>
+  <body class="bg-gray-100 p-3">
+    <nav>
+      <div class="border border-black-500 bg-blue-500 mb-2 rounded shadow">
+        <ul class="flex justify-center">
+          <li class="px-4 py-2 text-white"><a href="">Home</a></li>
+          <li class="px-4 py-2 text-white"><a href="./read.html">Todos</a></li>
+          <li class="px-4 py-2 text-white">
+            <a href="./index.html">Create Todo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <div class="max-w-md mx-auto bg-white p-6 rounded shadow">
+        <h1 class="text-2xl font-semibold mb-4">Add New Task</h1>
+        <form>
+          <div class="mb-4">
+            <label for="title" class="block text-gray-700 font-medium mb-2"
+              >Title</label
+            >
+            <input
+              type="text"
+              id="title"
+              name="title"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="description"
+              class="block text-gray-700 font-medium mb-2"
+              >Description</label
+            >
+            <textarea
+              id="description"
+              name="description"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+              rows="4"
+            ></textarea>
+          </div>
+          <div class="mb-4">
+            <label for="status" class="block text-gray-700 font-medium mb-2"
+              >Status</label
+            >
+            <select
+              id="status"
+              name="status"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+            >
+              <option value="not-started">Not Started</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label for="dueDate" class="block text-gray-700 font-medium mb-2"
+              >Due Date & Time</label
+            >
+            <input
+              type="datetime-local"
+              id="dueDate"
+              name="dueDate"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Add Task
+          </button>
+        </form>
+      </div>
+    </header>
+  </body>
+  <script src="./Scripts/index.js"></script>
+</html>
