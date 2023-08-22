@@ -1,0 +1,35 @@
+<div class="flex justify-center items-center bg-gray-100">
+    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-xl font-semibold mb-4">Update Todos</h1>
+        <form class="space-y-4">
+            <div>
+                <label for="id" class="block text-sm font-medium text-gray-700">ID</label>
+                <input id="id" type="number" [(ngModel)]="id" name="id" class="p-2 border rounded w-full">
+            </div>
+            <div>
+                <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+                <input id="title" type="text" [(ngModel)]="titles" name="title" class="p-2 border rounded w-full">
+            </div>
+            <button (click)="Update()" class="bg-blue-500 text-white px-3 py-1 rounded-md mr-2">
+                Update
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="container p-100">
+    <div class="text-center">
+        <h1 class="text-3xl font-semibold mb-8">Todo List</h1>
+    </div>
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-100">
+        <div *ngFor="let todo of todos" class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">{{ todo.title }}</h2>
+            <p class="text-gray-600">{{ todo.content }}</p>
+            <div class="mt-4">
+                <button (click)="Delete(todo.id)" class="bg-red-500 text-white px-3 py-1 rounded-md">
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
