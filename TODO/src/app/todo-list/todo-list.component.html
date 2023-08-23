@@ -23,6 +23,7 @@
     </div>
     <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-100">
         <div *ngFor="let todo of todos" class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">ID:- {{ todo.id }}</h2>
             <h2 class="text-lg font-semibold mb-2">{{ todo.title }}</h2>
             <p class="text-gray-600">{{ todo.content }}</p>
             <div class="mt-4">

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private apiurl='http://localhost:3000/data'
+  private apiurl='https://angular-jsonserver01.onrender.com/data'
   constructor(private http:HttpClient) { }
 
   getTodos():Observable<Todo[]> {

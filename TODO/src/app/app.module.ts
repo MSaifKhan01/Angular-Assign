@@ -8,12 +8,14 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule,AppRoutingModule

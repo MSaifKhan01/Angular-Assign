@@ -4,8 +4,8 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 
 const routes: Routes = [
-  {path:'',component:TodoFormComponent},
-  {path:'list',component:TodoListComponent},
+  {path:'create',component:TodoFormComponent},
+  {path:'',component:TodoListComponent},
 
 ];
 
