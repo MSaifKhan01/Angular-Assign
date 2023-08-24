@@ -4,9 +4,11 @@
             <img [src]="food.strCategoryThumb" [alt]="food.strCategory" class="w-full h-auto mb-4">
             <h3 class="text-xl font-semibold">{{food.strCategory}}</h3>
             <p class="text-gray-600 mt-2">{{food.strCategoryDescription}}</p>
+            <span class="text-xl">Rs - {{food.price}}</span>
             <div class="flex items-center mt-4">
                 <button class="px-3 py-2 bg-blue-500 text-white rounded-full mr-2"
                     (click)="DecrementQty(food.idCategory)">-</button>
+                  
                 <span class="text-xl">{{food.quantity}}</span>
                 <button class="px-3 py-2 bg-blue-500 text-white rounded-full ml-2"
                     (click)="IncrementQty(food.idCategory)">+</button>

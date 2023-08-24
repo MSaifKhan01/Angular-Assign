@@ -9,6 +9,7 @@ import { MenuService } from '../menu.service';
 export class CartpageComponent implements OnInit{
 
   data:any[]=[]
+  SumEle=0
   constructor(private cartService:MenuService){}
   ngOnInit(): void {
     this.getCartData()
@@ -18,10 +19,20 @@ export class CartpageComponent implements OnInit{
   }
 
   IncrementQty(id:string){
+
+
     for(let i=0;i<this.data.length;i++){
+
       if(this.data[i].idCategory==id){
-        this.data[i].quantity++
+        if(!this.data[i].originalPrice){
+          this.data[i].originalPrice = this.data[i].price;
+        }
+
+
+        this.data[i].quantity++;
+        this.data[i].price = this.data[i].originalPrice * this.data[i].quantity;
       }
+     
     }
     localStorage.setItem("cart",JSON.stringify(this.data))
     this.getCartData()
@@ -29,8 +40,13 @@ export class CartpageComponent implements OnInit{
   DecrementQty(id:string){
     for(let i=0;i<this.data.length;i++){
       if(this.data[i].idCategory==id && this.data[i].quantity>1){
+        if (!this.data[i].originalPrice) {
+          this.data[i].originalPrice = this.data[i].price;
+        }
         this.data[i].quantity--
+        // this.data[i].price = this.data[i].price * this.data[i].quantity;
       }
+      this.data[i].price = this.data[i].originalPrice * this.data[i].quantity;
     }
     localStorage.setItem("cart",JSON.stringify(this.data))
     this.getCartData()

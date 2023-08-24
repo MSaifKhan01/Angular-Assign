@@ -1,6 +1,19 @@
 <h1 class="text-center font-bold text-3xl mt-12 text-gray-800">Restaurant Menu</h1>
+<div class="flex items-center justify-center pt-2">
+    <select
+      class="text-white bg-blue-600 rounded px-2 py-1"
+      [(ngModel)]="selectedFood"
+      (ngModelChange)="filterItem(); logData()"
+    >
+      <option value="alldata">ALL</option>
+      <option value="Beef">Beef</option>
+      <option value="Chicken">Chicken</option>
+      <option value="Dessert">Dessert</option>
+      <option value="Pasta">pasta</option>
+    </select>
+  </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-5/6 mx-auto">
-    <div *ngFor="let food of foods"
+    <div *ngFor="let food of filtereditems"
         class="shadow-md hover:shadow-lg p-6 rounded-xl bg-white animate__animated animate__bounceIn">
         <img [src]="food.strCategoryThumb" [alt]="food.strCategory" class="w-full h-auto mb-4 rounded-lg">
         <h3 class="text-lg font-semibold">{{food.strCategory}}</h3>

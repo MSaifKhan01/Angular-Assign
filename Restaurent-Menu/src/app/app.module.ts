@@ -8,7 +8,7 @@ import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.compo
 import { HttpClientModule } from '@angular/common/http';
 import { CartpageComponent } from './cartpage/cartpage.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
